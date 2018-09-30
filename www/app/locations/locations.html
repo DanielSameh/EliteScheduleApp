@@ -1,5 +1,9 @@
-<ion-view>
+<ion-view title="Locations" ng-controller="LocationsCtrl as vm">
     <ion-content class="has-header">
-        <h1>Locations</h1>
+        <ion-list>
+            <ion-item ng-repeat="location in vm.locations">
+                {{location.name}}
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>
