@@ -1,6 +1,6 @@
-angular.module("eliteApp", ["ionic"])
+angular.module("eliteApp", ["ionic", "angular-cache"])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, CacheFactory) {
     $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs).
@@ -18,9 +18,14 @@ angular.module("eliteApp", ["ionic"])
         StatusBar.styleDefault();
       }
     });
+    CacheFactory.createCache("leagueDataCache", {storageMode: "localStorage", maxAge: 3.6e+6, deleteOnExpire: "aggressive"});
+    CacheFactory.createCache("leaguesCache", {storageMode: "localStorage", maxAge: 3.6e+6, deleteOnExpire: "aggressive"});
+    CacheFactory.createCache("myTeamsCache", {storageMode: "localStorage"});
+    CacheFactory.createCache("staticCache", {storageMode: "localStorage"});
   })
 
-  .config(function($stateProvider, $urlRouterProvider) {
+  .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+    $ionicConfigProvider.views.maxCache(0);
     $stateProvider
   
       .state('home', {
@@ -99,7 +104,7 @@ angular.module("eliteApp", ["ionic"])
           }
       });
 
-  $urlRouterProvider.otherwise('/app/teams');
+  $urlRouterProvider.otherwise('/home/leagues');
 
 
 

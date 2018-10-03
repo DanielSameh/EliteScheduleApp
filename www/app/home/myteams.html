@@ -1,5 +1,41 @@
-<ion-view>
+<ion-view ng-controller="MyTeamsCtrl as vm">
     <ion-content class="has-header">
-        <h1>My Teams</h1>
+        <div class="card" ng-hide="vm.myTeams">
+            <ion-item class="item-divider">
+                No Followed Teams
+            </ion-item>
+
+            <ion-item class="item-text-wrap">
+                <p>You are not currently following any teams.</p>
+                <p>First select a league, then you can follow teams from their team page.</p>
+                <button class="button button-positive button-full" ui-sref="home.leagues">
+                    Select League
+                </button>
+            </ion-item>
+        </div>
+
+        <div class="card" ng-show="vm.myTeams">
+            <ion-item class="item-divider">
+                My Teams
+            </ion-item>
+
+            <ion-item
+                    class="item-icon-right"
+                    ng-repeat="team in vm.myTeams"
+                    ng-click="vm.goToTeam(team)"
+            >
+                <h2>{{team.name}}</h2>
+                <p>{{team.leagueName}}</p>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+
+            <ion-item class="item-text-wrap">
+                <p>To follow more teams, select a league, then you can follow teams from their team page.</p>
+                <button class="button button-positive button-full" ui-sref="home.leagues">
+                    Select League
+                </button>
+            </ion-item>
+        </div>
+
     </ion-content>
 </ion-view>

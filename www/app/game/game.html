@@ -1,13 +1,16 @@
-<ion-view title="Game" ng-controller="GameCtrl as vm">
+<ion-view ng-controller="GameCtrl as vm">
+    <ion-nav-title>
+        Game Details
+    </ion-nav-title>
     <ion-content class="has-header">
         <div class="card">
             <ion-item class="item-divider item-energized">
                 Home Team
             </ion-item>
-            <ion-item class="item-text-wrap item-icon-right" ui-sref="app.team-detail({id: vm.game.team1Id})">
+            <a class="item item-text-wrap item-icon-right" ui-sref="app.team-detail({id: vm.game.team1Id})">
                 {{vm.game.team1}}
                 <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
+            </a>
             <ion-item class="item-divider">
                 Score: {{vm.game.team1Score}}
             </ion-item>
@@ -16,10 +19,10 @@
             <ion-item class="item-divider item-energized">
                 Away Team
             </ion-item>
-            <ion-item class="item-text-wrap item-icon-right" ui-sref="app.team-detail({id: vm.game.team2Id})">
+            <a class="item item-text-wrap item-icon-right" ui-sref="app.team-detail({id: vm.game.team2Id})">
                 {{vm.game.team2}}
                 <i class="icon ion-chevron-right icon-accessory"></i>
-            </ion-item>
+            </a>
             <ion-item class="item-divider">
                 Score: {{vm.game.team2Score}}
             </ion-item>
