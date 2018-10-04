@@ -4,6 +4,7 @@
     </ion-nav-title>
     <ion-content class="has-header">
         <div class="card">
+
             <ion-item class="item-button-right">
                 <h2>Record: {{vm.teamStandings.wins}}-{{vm.teamStandings.losses}}</h2>
                 <button
@@ -28,11 +29,11 @@
                         <br>
                         <p>{{game.time | date:'shortTime'}}</p>
                     </div>
-                    <div class="col col-66 col-center">
+                    <div class="col col-50 col-center">
                         <h3>{{game.homeAway}} {{game.opponent}}</h3>
                         <p>{{game.location}}</p>
                     </div>
-                    <div class="col col-20 col-center">
+                    <div class="col col-offset-10 col-30 col-center">
                         <h4 class="positive">{{game.scoreDisplay}}</h4>
                     </div>
                 </div>

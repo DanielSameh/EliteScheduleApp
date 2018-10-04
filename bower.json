@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "lodash": "2.4.1",
-    "angular-cache": "^4.6.0"
+    "angular-cache": "^4.6.0",
+    "showdown": "0.3.1"
   }
 }
