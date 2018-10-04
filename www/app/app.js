@@ -13,9 +13,8 @@ angular.module("eliteApp", ["ionic", "angular-cache"])
       }
   
       if (window.StatusBar) {
-        // Set the statusbar to use the default style, tweak this to
-        // remove the status bar on iOS or change it to use white instead of dark colors.
-        StatusBar.styleDefault();
+              StatusBar.styleDefault();
+              StatusBar.backgroundColorByHexString('#0a83a6');
       }
     });
     CacheFactory.createCache("leagueDataCache", {storageMode: "localStorage", maxAge: 3.6e+6, deleteOnExpire: "aggressive"});
@@ -26,6 +25,8 @@ angular.module("eliteApp", ["ionic", "angular-cache"])
 
   .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
     $ionicConfigProvider.views.maxCache(0);
+
+
     $stateProvider
   
       .state('home', {
@@ -104,7 +105,7 @@ angular.module("eliteApp", ["ionic", "angular-cache"])
           }
       });
 
-  $urlRouterProvider.otherwise('/home/leagues');
+    $urlRouterProvider.otherwise('/home/leagues');
 
 
 
