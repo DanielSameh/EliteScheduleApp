@@ -50,7 +50,7 @@ Pluralsight's [Building Mobile Apps With the Ionic Framework and AngularJS](http
           ionic serve
           ```
       
- 4. run and build the app for android or ios by using the following commands:
+ 4. run and build the app for android and ios by using the following commands:
  .
       1. Navigate to the project folder:
           ```
