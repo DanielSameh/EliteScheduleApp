@@ -40,7 +40,10 @@ Pluralsight's [Building Mobile Apps With the Ionic Framework and AngularJS](http
           ```
       2. Install app dependancies:
           ```
-          npm i
+          npm install
+          ```
+          ```
+          bower install
           ```
       3. Start the app:
           ```
