@@ -76,4 +76,4 @@ Pluralsight's [Building Mobile Apps With the Ionic Framework and AngularJS](http
 
 
 ## Copyright and License
-- supplied without rights information contributed by [Pluralsight](https://app.pluralsight.com) and [Steve Michelotti](https://app.pluralsight.com/profile/author/steve-michelotti)
+- supplied without rights information contributed by [Pluralsight](https://app.pluralsight.com) and [Steve Michelotti](https://app.pluralsight.com/profile/author/steve-michelotti).
