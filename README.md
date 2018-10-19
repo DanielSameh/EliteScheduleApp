@@ -24,11 +24,18 @@ Pluralsight's [Building Mobile Apps With the Ionic Framework and AngularJS](http
 
 
 ## Required Libraries and Dependencies
+* [Node.js](https://nodejs.org/en/).
 * Ionic CLI and Cordova:
      * install them globally by using the following command:
        ```
        npm install -g ionic cordova
        ```
+* Bower:
+     * install them globally by using the following command:
+       ```
+       npm install -g bower
+       ```
+       
 ## How to Run Project
 
 1. clone or download this repository.
